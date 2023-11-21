@@ -170,12 +170,12 @@ class lenet_model(nn.Module):
         #         # print(f'train[{label.item()}] = {labels_train[label].item()}', end='   ')
         #         nearest_n.append(labels_train[label].item())
         #     count_max = np.bincount(nearest_n)  # count=[0 0 0 0 0 0 2 2]
-        #     num_max = np.bincount(count_max)  # 2 最大值的个数
-        #     # knn中最值只有一个，输出该类别
+        #     num_max = np.bincount(count_max)  # 2 number of max value
+        #     # if only one label has largest votes
         #     if num_max[max(count_max)] == 1:
         #         pre_label = np.argmax(count_max)
         #         # print(f'[=1],label={np.argmax(count_max)}')
-        #     # knn中最值不止一个，输出最近样本的类别
+        #     # if more than one labels has largest, output the nearest label
         #     else:
         #         pre_label = labels_train[train_topk[0]].item()
         #         # print(f'[>1],label={labels_train[train_topk[0]].item()}')
