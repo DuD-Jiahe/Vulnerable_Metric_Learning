@@ -1,0 +1,22 @@
+mnist:
+    path: ./MNIST/raw/
+    #t10k-images-idx3-ubyte.gz
+    #t10k-labels-idx1-ubyte.gz
+    #train-images-idx3-ubyte.gz
+    #train-labels-idx1-ubyte.gz
+
+AlexNet:
+    epoch_cifar: 30
+    lr: 0.001
+    batchsize_cifar: 256
+
+
+lenet_triplet:
+    epoch: 1
+    epoch_v2: 10 # 3
+    epoch_v3: 1 # 3
+    lr: 0.001
+    batchsize: 64
+    batchsize_poison: 64
+    batchsize_v1: 128
+    batchsize_v2: 128 #同V3
